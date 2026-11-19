@@ -2,12 +2,18 @@ import { Component, computed, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Api } from './api';
 import { PHASE_COLOR, fmt, timerColor } from './util';
+import { RankingComponent } from './ranking';
 
 /** Écran projecteur d'une salle : /#/screen/1 … /#/screen/5 */
 @Component({
   selector: 'app-screen',
+  imports: [RankingComponent],
   template: `
     @if (api.pub(); as p) {
+     @if (isRest(p)) {
+      <app-ranking />
+      @if (p.paused) { <div class="pause">⏸ PAUSE</div> }
+     } @else {
       <div class="stage">
         <div class="top">
           <div class="ev">{{ p.event }}</div>
@@ -82,6 +88,7 @@ import { PHASE_COLOR, fmt, timerColor } from './util';
         @if (p.paused) { <div class="pause">⏸ PAUSE</div> }
         @if (!api.online()) { <div class="offline">Connexion perdue… le chrono continue</div> }
       </div>
+     }
     } @else {
       <div class="stage"><div class="mid"><div class="msg">Connexion…</div></div></div>
     }
@@ -100,7 +107,7 @@ import { PHASE_COLOR, fmt, timerColor } from './util';
     .move { background: var(--panel); border: 1px solid var(--line); border-radius: 1vw; padding: 1vw; display: flex; flex-direction: column; gap: .4vw; font-size: 1.6vw; }
     .move.me { border-color: var(--cyan); background: var(--panel2); }
     .move span { color: var(--muted); }
-    .pause { position: absolute; inset: 0; background: rgba(0,0,0,.7); display: flex; align-items: center; justify-content: center; font-size: 12vw; font-weight: 800; color: var(--orange); }
+    .pause { position: fixed; inset: 0; z-index: 5; background: rgba(15,25,56,.75); display: flex; align-items: center; justify-content: center; font-size: 12vw; font-weight: 800; color: var(--orange); }
     .offline { position: absolute; bottom: 1vw; left: 0; right: 0; text-align: center; color: var(--red); font-size: 1.6vw; }
   `],
 })
@@ -116,5 +123,6 @@ export class ScreenComponent {
     const a = this.assign();
     return a ? a.a.name + ' · ' + a.b.name : '';
   });
+  isRest = (p: any) => !!p.rooms?.[this.idx]?.rest;
   readonly _ = PHASE_COLOR;
 }

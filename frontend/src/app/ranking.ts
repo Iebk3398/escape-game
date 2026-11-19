@@ -47,8 +47,8 @@ import { PHASE_LABEL, fmt } from './util';
     .w { text-align: right; color: var(--muted); font-size: 2vw; }
     .pt { text-align: right; font-weight: 800; color: var(--cyan); width: 12vw; }
     tr.top3 .rk { color: var(--orange); }
-    tr.top3 .nm { color: #fff; }
-    tr.win td { background: rgba(34,211,238,.12); }
+    tr.top3 .nm { color: var(--text); }
+    tr.win td { background: rgba(8,145,178,.15); }
     .frozen { text-align: center; margin-top: 12vh; }
     .frozen .msg { font-size: 7vw; font-weight: 800; color: var(--orange); }
     .frozen .muted { font-size: 2.6vw; }
