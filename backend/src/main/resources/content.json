@@ -1,0 +1,54 @@
+{
+  "eventName": "IA – Section critique",
+  "finalRoomName": "Salle finale",
+  "finalCode": "21479",
+  "finalRiddle": "Chaque salle vous a donné un chiffre et un symbole. Les indices bonus révèlent la place d'un symbole dans le code à 5 chiffres. Reconstituez le code et donnez-le au maître final. Vous n'avez que 2 essais.",
+  "maxAttempts": 2,
+  "cooldownSec": 120,
+  "teamNames": [
+    "Équipe 1", "Équipe 2", "Équipe 3", "Équipe 4", "Équipe 5",
+    "Équipe 6", "Équipe 7", "Équipe 8", "Équipe 9", "Équipe 10"
+  ],
+  "rooms": [
+    {
+      "name": "Salle 1 – Vrai ou IA ?",
+      "rest": false,
+      "symbol": "▲",
+      "fragment": "4",
+      "bonusHint": "▲ est le 3e chiffre du code.",
+      "description": "Repérez les images générées par IA parmi de vraies photos."
+    },
+    {
+      "name": "Salle 2 – Décodeur",
+      "rest": false,
+      "symbol": "◆",
+      "fragment": "2",
+      "bonusHint": "◆ est le 1er chiffre du code.",
+      "description": "Déchiffrez le message laissé par l'IA."
+    },
+    {
+      "name": "Salle 3 – Prompt Master",
+      "rest": false,
+      "symbol": "●",
+      "fragment": "9",
+      "bonusHint": "● est le 5e chiffre du code.",
+      "description": "Retrouvez l'objet à partir du prompt."
+    },
+    {
+      "name": "Salle 4 – Mémoire robot",
+      "rest": false,
+      "symbol": "■",
+      "fragment": "1",
+      "bonusHint": "■ est le 2e chiffre du code.",
+      "description": "Reproduisez la séquence du robot."
+    },
+    {
+      "name": "Salle de repos",
+      "rest": true,
+      "symbol": "★",
+      "fragment": "7",
+      "bonusHint": "",
+      "description": "Pause, boissons. Indice offert à tous."
+    }
+  ]
+}

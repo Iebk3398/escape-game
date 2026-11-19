@@ -1,0 +1,28 @@
+server:
+  port: ${PORT:8080}
+  compression:
+    enabled: true
+
+spring:
+  application:
+    name: escape-game
+  datasource:
+    # Neon : jdbc:postgresql://<hote>/<base>?sslmode=require
+    url: ${JDBC_URL:jdbc:h2:mem:escape;DB_CLOSE_DELAY=-1}
+    username: ${DB_USER:sa}
+    password: ${DB_PASSWORD:}
+    hikari:
+      maximum-pool-size: 3
+      minimum-idle: 0
+      max-lifetime: 240000
+      connection-timeout: 20000
+  main:
+    banner-mode: off
+
+# Variables d'environnement utiles :
+#   ADMIN_PASSWORD   mot de passe admin (OBLIGATOIRE en production)
+#   APP_SECRET       secret de signature des jetons (sinon dérivé du mot de passe admin)
+#   JDBC_URL, DB_USER, DB_PASSWORD   base PostgreSQL (Neon)
+#   ESCAPE_ROUND_SEC (600), ESCAPE_VALIDATION_SEC (60), ESCAPE_TRANSITION_SEC (120),
+#   ESCAPE_FINAL_TRANSIT_SEC (120), ESCAPE_FINAL_SEC (1200)   durées en secondes
+#   CONTENT_FILE     chemin d'un content.json alternatif

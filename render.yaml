@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: escape-game
+    runtime: docker
+    plan: starter
+    healthCheckPath: /api/health
+    envVars:
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: JDBC_URL
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: APP_SECRET
+        generateValue: true
