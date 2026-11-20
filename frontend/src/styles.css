@@ -1,21 +1,21 @@
 :root {
-  /* Palette « Ça Passe ou Ça Casse » : fond crème, cartes blanches, couleurs vives */
-  --bg: #F7F5F1;
+  /* Palette harmonisée : crème chaud, bleu nuit, or ; vert/terracotta/ambre sobres */
+  --bg: #FAF6EE;
   --panel: #FFFFFF;
-  --panel2: #F1EEEA;
-  --line: #DDD8D1;
-  --text: #1E1A24;
-  --muted: #6B6475;
-  --cyan: #1F84D6;
-  --violet: #0E7C86;
-  --green: #14A86B;
-  --orange: #D9480F;
-  --red: #E8503F;
-  --blue: #1F84D6;
-  --pink: #E0479A;
-  --gold: #FFC83D;
-  --gold-deep: #D99A00;
-  --gold-ink: #2B1B00;
+  --panel2: #F3ECDD;
+  --line: #E4DAC6;
+  --text: #1B2A41;
+  --muted: #5F6B7D;
+  --cyan: #1F5F8B;
+  --violet: #1B3A5C;
+  --green: #2E8B6A;
+  --orange: #C2641A;
+  --red: #C8452F;
+  --blue: #1F5F8B;
+  --pink: #C8452F;
+  --gold: #F2B134;
+  --gold-deep: #C98A12;
+  --gold-ink: #2A1A00;
   --display: "Bowlby One", "Arial Black", Impact, sans-serif;
   --body: "Figtree", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
@@ -35,10 +35,10 @@ a { color: var(--cyan); }
   color: var(--gold-ink); background: var(--b); cursor: pointer; width: 100%; box-shadow: 0 5px 0 var(--s); transition: transform .08s, box-shadow .08s; }
 .btn:active { transform: translateY(4px); box-shadow: 0 1px 0 var(--s); }
 .btn.small { min-height: 40px; padding: 0 12px; font-size: .9rem; width: auto; }
-.btn.violet { --b: var(--violet); --s: #08545B; color: #fff; }
-.btn.green { --b: var(--green); --s: #0B7A4C; color: #fff; }
-.btn.orange { --b: var(--orange); --s: #9A3207; color: #fff; }
-.btn.red { --b: var(--red); --s: #A8301F; color: #fff; }
+.btn.violet { --b: var(--violet); --s: #0F2338; color: #fff; }
+.btn.green { --b: var(--green); --s: #1D5E47; color: #fff; }
+.btn.orange { --b: var(--orange); --s: #8A4510; color: #fff; }
+.btn.red { --b: var(--red); --s: #8F2D1E; color: #fff; }
 .btn.ghost { --b: transparent; --s: transparent; box-shadow: none; color: var(--text); border: 2px solid var(--line); }
 .btn:disabled { opacity: .45; cursor: not-allowed; }
 .btn.sel { outline: 3px solid var(--text); }

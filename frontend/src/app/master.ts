@@ -35,7 +35,7 @@ import { PHASE_LABEL, fmt, timerColor } from './util';
         </div>
 
         @if (m.pending && api.phase() === 'VALIDATION') {
-          <div class="card center blink" style="border-color:var(--violet);background:#E2F4F5">
+          <div class="card center blink" style="border-color:var(--violet);background:#E6EDF5">
             <h2 style="margin:0">⚠ Validez les scores !</h2>
             <div class="timer" style="font-size:2.6rem;color:var(--violet)">{{ time() }}</div>
           </div>
