@@ -38,7 +38,7 @@ import { PHASE_LABEL, fmt } from './util';
   styles: [`
     .page { min-height: 100vh; padding: 2vw 4vw; }
     .head { display: flex; justify-content: space-between; align-items: baseline; }
-    h1 { font-size: 4vw; margin: 0 0 1vw; }
+    h1 { font-size: 4vw; margin: 0 0 1vw; background: none; -webkit-text-fill-color: var(--text); }
     .st { font-size: 1.8vw; }
     table { width: 100%; }
     td { font-size: 2.8vw; padding: .7vw 1.5vw; border-bottom: 1px solid var(--line); }
@@ -46,9 +46,9 @@ import { PHASE_LABEL, fmt } from './util';
     .nm { font-weight: 700; }
     .w { text-align: right; color: var(--muted); font-size: 2vw; }
     .pt { text-align: right; font-weight: 800; color: var(--cyan); width: 12vw; }
-    tr.top3 .rk { color: var(--orange); }
+    tr.top3 .rk { color: var(--orange); font-family: var(--display); font-weight: 400; }
     tr.top3 .nm { color: var(--text); }
-    tr.win td { background: rgba(8,145,178,.15); }
+    tr.win td { background: rgba(255,200,61,.28); }
     .frozen { text-align: center; margin-top: 12vh; }
     .frozen .msg { font-size: 7vw; font-weight: 800; color: var(--orange); }
     .frozen .muted { font-size: 2.6vw; }
