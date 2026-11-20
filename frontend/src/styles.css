@@ -7,11 +7,11 @@
   --text: #1E1A24;
   --muted: #6B6475;
   --cyan: #1F84D6;
-  --violet: #8A4FE0;
+  --violet: #0E7C86;
   --green: #14A86B;
   --orange: #D9480F;
   --red: #E8503F;
-  --blue: #3F5BD9;
+  --blue: #1F84D6;
   --pink: #E0479A;
   --gold: #FFC83D;
   --gold-deep: #D99A00;
@@ -35,7 +35,7 @@ a { color: var(--cyan); }
   color: var(--gold-ink); background: var(--b); cursor: pointer; width: 100%; box-shadow: 0 5px 0 var(--s); transition: transform .08s, box-shadow .08s; }
 .btn:active { transform: translateY(4px); box-shadow: 0 1px 0 var(--s); }
 .btn.small { min-height: 40px; padding: 0 12px; font-size: .9rem; width: auto; }
-.btn.violet { --b: var(--violet); --s: #5B2FA8; color: #fff; }
+.btn.violet { --b: var(--violet); --s: #08545B; color: #fff; }
 .btn.green { --b: var(--green); --s: #0B7A4C; color: #fff; }
 .btn.orange { --b: var(--orange); --s: #9A3207; color: #fff; }
 .btn.red { --b: var(--red); --s: #A8301F; color: #fff; }
